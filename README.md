@@ -1,184 +1,130 @@
-# ⭐ **u-sell-it-demo**
+---
 
-A lightweight marketplace demo built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.  
-This project fetches real product data from the **Platzi Fake Store API** and displays it using a clean, responsive UI.
+# 🛒 u-sell-it-demo
 
-The goal of this demo is to explore UI patterns, API integration, and component structure for the future **U‑Sell‑It** application.
+A lightweight, modern e-commerce marketplace prototype built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. 
+
+This project acts as an architectural blueprint and UI sandbox for the future **U‑Sell‑It** platform. It integrates with the **Platzi Fake Store API** to handle mock product cycles, dynamic routing, and responsive layouts. The foundational authentication user interfaces—including user login, registration, and account recovery—are near completion.
 
 ---
 
-# 🌍 **Live Demo**
+## 🛠 Tech Stack
 
-The project is deployed on GitHub Pages:
+* **Frontend:** React 18 & TypeScript
+* **Build Tool:** Vite (Optimized HMR & production bundling)
+* **Styling:** Tailwind CSS v3 (Strict utility-first workflow)
+* **Data Layer:** Platzi Fake Store Rest API
+
+---
+
+## 📁 Core Architecture
+
+```text
+u-sell-it-demo/
+├── src/
+│   ├── assets/       # Static media assets (Logos, graphics)
+│   ├── components/   # Reusable UI elements (Modals, Footers, Cards)
+│   ├── layout/       # Global application structural layouts
+│   ├── pages/        # View components (Login, Registration, Password Reset)
+│   ├── router/       # Centralized client-side routing logic
+│   └── index.css     # Tailwind injections
 
 ```
-https://YOUR_USERNAME.github.io/u-sell-it-demo
+
+---
+
+## 🎨 Styling Principles
+
+This project enforces a highly maintainable, modern styling paradigm:
+
+* **Zero Custom CSS:** No component-level `.css` modules or nested stylesheets.
+* **Utility-First:** 100% of the interface is driven by Tailwind CSS design tokens.
+* **Responsive Architecture:** Fully fluid UI configured specifically to handle complex grid-to-mobile layouts cleanly.
+
+---
+
+## 🌐 API Integration
+
+Data fetching is modularized to mimic real-world production environments.
+
+* **Base Endpoint:** `https://api.escuelajs.co/api/v1/`
+* **Target Resources:** `/products`, `/categories`, `/users`
+
+```typescript
+// Sample asynchronous ingestion layout utilized across endpoints
+const response = await fetch("[https://api.escuelajs.co/api/v1/products](https://api.escuelajs.co/api/v1/products)");
+const data = await response.json();
+
 ```
 
-Replace `YOUR_USERNAME` with the GitHub account hosting the repo.
-
 ---
 
-# 🛠 **Tech Stack**
+## 🚀 Getting Started (Local Development)
 
-- **React 18**  
-- **TypeScript**  
-- **Vite** (fast dev server + optimized build)  
-- **Tailwind CSS v3** (utility‑first styling)  
-- **Platzi Fake Store API** (product data source)
+To spin up a local instance of the application:
 
----
-
-# 🚀 **Running the Project**
-
-Clone the repository:
-
+1. **Clone the repository:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/u-sell-it-demo
+git clone [https://github.com/KingNeoIV/u-sell-it-demo.git](https://github.com/KingNeoIV/u-sell-it-demo.git)
 cd u-sell-it-demo
+
 ```
 
-Install dependencies:
 
+2. **Install dependencies:**
 ```bash
 npm install
+
 ```
 
-Start the development server:
 
+3. **Launch the development server:**
 ```bash
 npm run dev
-```
-
-The app will be available at:
 
 ```
-http://localhost:5173/
-```
+
+
 
 ---
 
-# 🌐 **API — Platzi Fake Store**
+## 📦 Production & Deployment
 
-This demo uses the Fake Store API:
+### Building Locally
 
-```
-https://api.escuelajs.co/api/v1/
-```
-
-Common endpoints:
-
-- Products  
-  `https://api.escuelajs.co/api/v1/products`
-- Categories  
-  `https://api.escuelajs.co/api/v1/categories`
-- Users  
-  `https://api.escuelajs.co/api/v1/users`
-
-Example request:
-
-```ts
-const response = await fetch("https://api.escuelajs.co/api/v1/products");
-const products = await response.json();
-```
-
-API logic is organized inside:
-
-```
-src/services/
-```
-
----
-
-# 📁 **Project Structure**
-
-```
-u-sell-it-demo/
-│
-├── index.html
-├── vite.config.ts
-├── tailwind.config.js
-├── postcss.config.js
-│
-└── src/
-    ├── main.tsx
-    ├── App.tsx
-    ├── index.css
-    │
-    ├── components/
-    ├── services/
-    ├── hooks/
-    ├── types/
-    └── views/
-```
-
----
-
-# 🎨 **Styling**
-
-This project uses **Tailwind CSS only**.
-
-- No component‑level `.css` files  
-- No nested CSS  
-- No Vite template styles  
-
-All UI is built using Tailwind utility classes.
-
----
-
-# 📦 **Build**
-
-Create a production build:
+To generate a compiled, production-ready bundle inside the `/dist` directory:
 
 ```bash
 npm run build
-```
-
-Output is generated in:
 
 ```
-dist/
-```
 
----
+### GitHub Pages Deployment (Upcoming)
 
-# 🌍 **Deploying to GitHub Pages**
-
-Deployment uses the `gh-pages` package.
-
-Install (if not already installed):
-
-```bash
-npm install -D gh-pages
-```
-
-Add to `package.json`:
+Once prototyping wraps up, the demo will be hosted via GitHub Pages. The automation pipeline will utilize the `gh-pages` deployment suite:
 
 ```json
-"homepage": "https://YOUR_USERNAME.github.io/u-sell-it-demo",
+"homepage": "[https://KingNeoIV.github.io/u-sell-it-demo](https://KingNeoIV.github.io/u-sell-it-demo)",
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d dist"
 }
-```
 
-Deploy:
-
-```bash
-npm run deploy
 ```
 
 ---
 
-# 🏁 **Roadmap**
+## 🏁 Development Roadmap
 
-Planned enhancements:
+* [x] Scaffold scalable React + TS + Tailwind architecture
+* [x] Complete User Login UI layout
+* [x] Complete User Registration UI layout
+* [x] Complete Forgot Password / Account Recovery UI elements
+* [ ] Implement global state management/custom hooks for async API fetching
+* [ ] Connect dynamic product grid and view filtering layouts
+* [ ] Integrate full user sign-up/login request flows with backend API
+* [ ] Deploy live demonstration client via GitHub Pages
 
-- Product listing grid  
-- Product detail modal  
-- Category filtering  
-- User authentication flow  
-- Dashboard UI  
-- Mobile‑first responsive layout  
+```
 
----
+```
