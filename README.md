@@ -124,7 +124,3 @@ Once prototyping wraps up, the demo will be hosted via GitHub Pages. The automat
 * [ ] Connect dynamic product grid and view filtering layouts
 * [ ] Integrate full user sign-up/login request flows with backend API
 * [ ] Deploy live demonstration client via GitHub Pages
-
-```
-
-```
