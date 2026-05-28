@@ -57,9 +57,16 @@ export default function Login() {
                             </div>
 
                             {/* Button */}
-                            <button className="mt-2 bg-purple-600 hover:bg-purple-700 transition text-white py-2 rounded-lg font-semibold">
-                                Login
-                            </button>
+                            <Link
+                                to={"/dashboard"}
+                                className="
+                                    mt-2 bg-purple-600 hover:bg-purple-700 transition text-white 
+                                    py-2  px-4 rounded-lg font-semibold
+                                    inline-flex items-center justify-center
+                                "
+                            > 
+                                <p className="self-center">Login</p> 
+                            </Link>
                         </div>
                     </div>
 
