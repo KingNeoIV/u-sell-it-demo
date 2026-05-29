@@ -20,7 +20,7 @@ export default {
 
         // ── Landscape breakpoints ────────────────────────────────
         'phone-landscape': {
-          raw: '(max-width: 767px) and (orientation: landscape)',
+          raw: '(max-width: 960px) and (orientation: landscape)',
         },
         'tablet-landscape': {
           raw: '(min-width: 768px) and (max-width: 1366px) and (orientation: landscape)',
