@@ -3,66 +3,65 @@ import Logo from "../assets/LOGO.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white border-t border-white/10 py-12 phone-landscape:py-6">
+    <footer className="bg-slate-900 text-white border-t border-white/10 py-12">
       <div
         className="
-                max-w-6xl mx-auto px-6
-                grid grid-cols-1 gap-12
-                tablet:grid-cols-3
-                phone-landscape:grid-cols-3 phone-landscape:gap-6
-            "
+          max-w-6xl mx-auto px-6
+          grid grid-cols-1 gap-12
+          md:grid-cols-3
+        "
       >
         {/* Left: u-sell-it */}
-        <div className="flex flex-col items-center text-center gap-4 phone-landscape:gap-2">
-          <div className="flex items-center gap-4 phone-landscape:flex-col phone-landscape:gap-1">
+        <div className="flex flex-col items-center text-center gap-4">
+          <div className="flex items-center gap-4 flex-col sm:flex-row">
             <img
               src={Logo}
               alt="u-sell-it Logo"
-              className="h-24 w-auto drop-shadow-lg phone-landscape:h-16 laptop:h-28"
+              className="h-20 sm:h-24 lg:h-28 w-auto drop-shadow-lg"
             />
-            <h3 className="text-xl font-semibold tracking-wide phone-landscape:text-sm">
+            <h3 className="text-xl font-semibold tracking-wide sm:text-lg lg:text-xl">
               u-sell-it (demo)
             </h3>
           </div>
 
-          <p className="text-white/70 leading-relaxed text-sm max-w-sm phone-landscape:max-w-xs">
+          <p className="text-white/70 leading-relaxed text-sm max-w-sm">
             A modern marketplace application built with React and Tailwind, soon
             expanding into a full drop-shipping service platform.
           </p>
         </div>
 
         {/* Center: Developer Info */}
-        <div className="flex flex-col items-center text-center gap-3 text-sm text-white/80 phone-landscape:gap-1">
-          <h3 className="text-lg font-semibold text-white tracking-wide mb-1 phone-landscape:text-base">
+        <div className="flex flex-col items-center text-center gap-3 text-sm text-white/80">
+          <h3 className="text-lg font-semibold text-white tracking-wide mb-1">
             Developer Info
           </h3>
 
-          <div className="flex flex-col gap-1 phone-landscape:gap-0">
+          <div className="flex flex-col gap-1">
             <span className="font-medium text-white">Designer:</span>
             <span>Michael Rios</span>
           </div>
 
-          <div className="flex flex-col gap-1 phone-landscape:gap-0">
+          <div className="flex flex-col gap-1">
             <span className="font-medium text-white">GitHub:</span>
             <a
               href="https://github.com/KingNeoIV"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-300 hover:text-purple-400 underline transition-colors duration-fast"
+              className="text-purple-300 hover:text-purple-400 underline transition-colors"
             >
               KingNeoIV
             </a>
           </div>
 
-          <div className="flex flex-col gap-1 phone-landscape:gap-0">
+          <div className="flex flex-col gap-1">
             <span className="font-medium text-white">Call:</span>
             <span>1 (361)-363-6781</span>
           </div>
         </div>
 
         {/* Right: NeoIV Tech Solutions */}
-        <div className="flex flex-col items-center text-center gap-4 phone-landscape:gap-2">
-          <div className="flex flex-col items-center gap-2 phone-landscape:gap-1">
+        <div className="flex flex-col items-center text-center gap-4">
+          <div className="flex flex-col items-center gap-2">
             <a
               href="https://michaelrios.dev"
               target="_blank"
@@ -71,15 +70,15 @@ export default function Footer() {
               <img
                 src={NeoIVTech}
                 alt="NeoIVTech Logo"
-                className="h-20 w-auto drop-shadow-lg phone-landscape:h-12 tablet:h-16"
+                className="h-16 sm:h-20 md:h-24 w-auto drop-shadow-lg"
               />
             </a>
-            <h3 className="text-2xl font-semibold tracking-wide phone-landscape:text-base">
+            <h3 className="text-2xl font-semibold tracking-wide sm:text-xl lg:text-2xl">
               NeoIV Tech Solutions
             </h3>
           </div>
 
-          <p className="text-white/70 leading-relaxed text-sm max-w-md phone-landscape:max-w-xs">
+          <p className="text-white/70 leading-relaxed text-sm max-w-md">
             Designed and developed by Michael Rios, NeoIV Tech Solutions. Visit
             my personal website at michaelrios.dev to explore more projects,
             services and custom software solutions.
@@ -88,9 +87,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="mt-12 phone-landscape:mt-6 text-center text-white/40 text-xs tracking-wider">
-        &copy; {new Date().getFullYear()} u-sell-it &amp; NeoIV Tech Solutions
-        &mdash; All Rights Reserved.
+      <div className="mt-12 text-center text-white/40 text-xs tracking-wider">
+        &copy; {new Date().getFullYear()} u-sell-it &amp; NeoIV Tech Solutions — All Rights Reserved.
       </div>
     </footer>
   );
