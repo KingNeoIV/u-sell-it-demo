@@ -6,17 +6,17 @@ export function useBreakpoint() {
   useEffect(() => {
     function update() {
       const width = window.innerWidth;
-      const height = window.innerHeight;
-      const landscape = width > height;
 
       if (width >= 1280) {
-        setBreakpoint("desktop");
+        setBreakpoint("xl");        // desktop
       } else if (width >= 1024) {
-        setBreakpoint("laptop");
-      } else if (landscape && width <= 960) {
-        setBreakpoint("phone-landscape");
+        setBreakpoint("lg");        // laptop
+      } else if (width >= 768) {
+        setBreakpoint("md");        // tablet
+      } else if (width >= 640) {
+        setBreakpoint("sm");        // small screens
       } else {
-        setBreakpoint("mobile");
+        setBreakpoint("mobile");    // default
       }
     }
 
